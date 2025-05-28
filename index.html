@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Visualgv.com</h1>
+    </header>
+    
+    <nav class="menu">
+        <ul>
+            <li><a href="#"><i class="fas fa-building"></i> Organizaciones</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> Personas</a></li>
+            <li><a href="#"><i class="fas fa-file"></i> Archivos</a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fas fa-comments"></i> Chats</a></li>
+                    <li><a href="#"><i class="fas fa-user-check"></i> Autorizador de Archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-industry"></i> Industrias</a></li>
+            <li><a href="#"><i class="fas fa-box"></i> Inventario de Activos</a></li>
+            <li><a href="#"><i class="fas fa-handshake"></i> Zona Match</a></li>
+            <li><a href="#"><i class="fas fa-vr-cardboard"></i> Realidad Aumentada</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> GPS Tracking</a></li>
+            <li><a href="#"><i class="fas fa-camera"></i> Evidencias</a></li>
+            <li><a href="#"><i class="fas fa-chart-bar"></i> Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-modules">
+            <section class="dashboard-module" id="module-organizaciones">
+                <h2><i class="fas fa-building"></i> Organizaciones</h2>
+                <div>
+                  <form role="organizacion"
+                        class="organizacion"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <div class="organizacion">
+                          <h1>Organización, Empresa o tu mismo</h1>
+                          <p>
+                            <label for="organizacion">
+                              <input type="text"
+                                    name="organizacion"
+                                    value="Crear el nombre de tu organización"
+                                    placeholder="Organización, empresa o tu mismo"
+                                    aria-label="Organización, empresa o tu mismo"
+                                    size="40">
+                            </label></p>
+                          <button type="submit" name="buttonCrearOrganizacion">Crear</button>
+                          <button type="submit" name="buttonEditarOrganizacion">Edita</button>
+                          <button type="submit" name="buttonBorrarOrganizacion">Borrar</button>
+                          <button type="submit" name="buttonArchivaOrganizacion">Archivar</button>
+                          <button type="submit" name="buttonRecuperarOrganizacion">Recuperar</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="invitarUsuariosOrganizacion"
+                        class="invitarUsuariosOrganizacion"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                      <div class="invitarUsuariosOrganizacion">
+                        <p>
+                          <label for="invitarUsuariosOrganizacion">Invitar a usuarios a tu organización
+                          <input type="email"
+                            placeholder="Correo electrónico para invitar a organización"
+                            aria-label="Correo electrónico para invitar a  organización" size="50">
+                          </label></p>
+                          <button type="submit" name="buttonEmailOrganizacion">Invitar usuarios a organización</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="proyecto"
+                        class="proyecto"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <div class="proyecto">
+                          <h1>Proyectos, Campañas o Eventos</h1>
+                          <p>
+                            <label for="proyecto">
+                              <input type="text"
+                                    name="proyecto"
+                                    value="Crear el nombre de tu proyecto"
+                                    placeholder="Crea el nombre tu proyecto"
+                                    aria-label="Crea el nombre de tu proyecto"
+                                    size="40">
+                            </label></p>
+                          <button type="submit" name="buttonCrearProyecto">Crear</button>
+                          <button type="submit" name="buttonEditarProyecto">Edita</button>
+                          <button type="submit" name="buttonBorrarProyecto">Borrar</button>
+                          <button type="submit" name="buttonArchivarProyecto">Archivar</button>
+                          <button type="submit" name="buttonRecuperarProyecto">Recuperar</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="invitarUsuariosProyecto"
+                        class="invitarUsuariosProyecto"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                      <div class="invitarUsuariosProyecto">
+                        <p>
+                          <label for="invitarUsuariosProyecto">Invitar a usuarios a tu Proyecto
+                          <input type="email"
+                                 placeholder="Correo electrónico para invitar a Proyecto"
+                                 aria-label="Correo electrónico para invitar a Proyecto" size="50">
+                          </label></p>
+                          <button type="submit" name="buttonEmailProyecto">Invitar usuarios a Proyecto</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                </div>
+            </section>
+            <section class="dashboard-module" id="module-personas" style="display:none">
+                <h2><i class="fas fa-user"></i> Personas</h2>
+                <div>
+                  <form role="link"
+                        class="link"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <div class="link">
+                          <h1>Link</h1>
+                          <p>Agrega el link de la red social o de la geolocalización de alguna persona</p>
+                          <p>
+                            <label for="link">
+                              <input type="text"
+                                    name="link"
+                                    value=""
+                                    placeholder="Agrega el link de la red social o de la geolocalización de alguna persona"
+                                    aria-label="Agrega el link de la red social o de la geolocalización de alguna persona"
+                                    size="40">
+                            </label></p>
+                          <button type="submit" name="buttonCrearLink">Crear</button>
+                          <button type="submit" name="buttonEditarLink">Edita</button>
+                          <button type="submit" name="buttonBorrarLink">Borrar</button>
+                          <button type="submit" name="buttonArchivarLink">Archivar</button>
+                          <button type="submit" name="buttonRecuperarLink">Recuperar</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="invitarUsuariosLink"
+                        class="invitarUsuariosLink"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                      <div class="invitarUsuariosLink">
+                        <p>
+                          <label for="invitarUsuariosLink">Invitar a usuarios a tu Link
+                          <input type="email"
+                            placeholder="Correo electrónico para invitar a link"
+                            aria-label="Correo electrónico para invitar a link" size="50">
+                          </label></p>
+                          <button type="submit" name="buttonEmailLink">Invitar usuarios a link</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="proyectoLink"
+                        class="proyectoLink"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <div class="proyectoLink">
+                          <h1>Proyectos, Campañas o Eventos</h1>
+                          <p>
+                            <label for="proyectoLink">
+                              <input type="text"
+                                    name="proyectoLink"
+                                    value=""
+                                    placeholder="Agrega el link de la red social o de la geolocalización de alguna persona"
+                                    aria-label="Agrega el link de la red social o de la geolocalización de alguna persona"
+                                    size="40">
+                            </label></p>
+                          <button type="submit" name="buttonCrearProyectoLink">Crear</button>
+                          <button type="submit" name="buttonEditarProyectoLink">Edita</button>
+                          <button type="submit" name="buttonBorrarProyectoLink">Borrar</button>
+                          <button type="submit" name="buttonArchivarProyectoLink">Archivar</button>
+                          <button type="submit" name="buttonRecuperarProyectoLink">Recuperar</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                  <form role="invitarUsuariosProyectoLink"
+                        class="invitarUsuariosProyectoLink"
+                        action="index.html"
+                        method="post"
+                        enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                      <div class="invitarUsuariosProyectoLink">
+                        <p>
+                          <label for="invitarUsuariosProyectoLink">Invitar a usuarios a tu Proyecto
+                          <input type="email"
+                                 placeholder="Correo electrónico para invitar a Proyecto"
+                                 aria-label="Correo electrónico para invitar a Proyecto" size="50">
+                          </label></p>
+                          <button type="submit" name="buttonEmailProyectoLink">Invitar usuarios a Proyecto</button>
+                        </div>
+                    </fieldset>
+                  </form>
+                </div>
+            </section>
+            <section class="dashboard-module" id="module-archivos" style="display:none">
+                <h2><i class="fas fa-file"></i> Archivos</h2>
+                <form role="File Upload"
+                      class="File Upload"
+                      action="index.html"
+                      method="post"
+                      enctype="multipart/form-data">
+                  <fieldset>
+                      <div class="File Upload">
+                        <h1>Suba un archivo - Upload a File</h1>
+                        <p>Drop files to upload, Browse (your device)</p>
+                        <p>
+                          <label for="File Upload">
+                            <input type="file"
+                                  name="File Upload or foto"
+                                  value="File Upload"
+                                  placeholder="File Upload"
+                                  aria-label="Guarda tus archivos"
+                                  size="40">
+                          </label>
+                        </p>
+                        <!--progress para archivos muy pesados-->
+                        <button type="submit" name="Browse your device">Subir</button>
+                      </div>
+                  </fieldset>
+                </form>
+                <form role="invitarUsuariosArchivo"
+                      class="invitarUsuariosArchivo"
+                      action="index.html"
+                      method="post"
+                      enctype="application/x-www-form-urlencoded">
+                  <fieldset>
+                    <div class="invitarUsuariosArchivo">
+                      <p>
+                        <label for="invitarUsuariosArchivo">Invitar usuarios a tu Archivo
+                          <input type="email"
+                                 placeholder="Correo electrónico para compartir acceso a tu archivo"
+                                 aria-label="Correo electrónico para compartir acceso a tu archivo" size="50">
+                        </label>
+                      </p>
+                      <button type="submit" name="buttonEmailArchivo">Compartir acceso a tu archivo</button>
+                      <h4><strong> Activos Digitales </strong> Archivos,
+                        fotos y diseños en general, Digital asset,
+                        Data asset, Archivos y activos digitales y físicos
+                      </h4>
+                    </div>
+                  </fieldset>
+                </form>
+            </section>
+            <section class="dashboard-module" id="module-industrias" style="display:none">
+                <div>
+                    <h4>Autorizador de archivos - Chat para ponerse de acuerdo</h4>
+                    <section class="module">
+                        <h1>Publica en redes sociales tu archivo </h1>
+                        <h3>Processes</h3>
+                        <p>Module content for Processes will go here.</p>
+                        <div>
+                            <h1>Envia a un proceso o otra industria diferente</h1>
+                            <h1>Procesos o industrias</h1>
+                            <h4>Tipo </h4>
+                            <select>
+                                <option>Publicidad</option>
+                                <option>Administración de organizaciones</option>
+                            </select>
+                            <br>
+                            <hr>
+                            <h4>Subcategoría </h4>
+                            <select>
+                                <option>Exterior Fija</option>
+                                <option>Exterior Movil</option>
+                            </select>
+                            <p>Tipos de industria:
+                                <select name="tipo de proceso" size="1">
+                                    <option>Impresión offest</option>
+                                    <option>Impresión digital gran formato sobre materiales rígidos y flexibles</option>
+                                    <option>Diseño industrial</option>
+                                    <option>Seguimiento GPS</option>
+                                    <option>Otro</option>
+                                    <option>Otro</option>
+                                </select>
+                                <select>
+                                    <option>Publicidad</option>
+                                    <option>Administración de organizaciones</option>
+                                </select>
+                                <select>
+                                    <option>Exterior Fija</option>
+                                    <option>Exterior Movil</option>
+                                </select>
+                            </p>
+                            <h2>Ordenes de trabajo</h2>
+                            <h2>Rastreo de personas</h2>
+                            <hr>
+                        </div>
+                    </section>
+                    <section class="module">
+                        <h3>Asset Inventory</h3>
+                        <p>Module content for Asset Inventory will go here.</p>
+                        <div>
+                            <h1><strong>Elementos de Inventario - Items</strong></h1>
+                            <h2>Subir Catálogo en formato ...</h2>
+                            <p>Aquí podría subir el catálogo cualquier empresa siguiendo las practicas comunes de Amazon, mercado libre , ebay </p>
+                            <label for="File Upload">
+                                <input type="file"
+                                    name="File Upload or foto"
+                                    value="File Upload"
+                                    placeholder="File Upload"
+                                    aria-label="Guarda tus archivos"
+                                    size="40">
+                            </label>
+                            <button type="submit">Archivo - Send to process</button>
+                        </div>
+                    </section>
+                    <section class="module">
+                        <h3>Matches</h3>
+                        <p>Module content for Matches will go here.</p>
+                    </section>
+                    <section class="module">
+                        <h3>Augmented Reality</h3>
+                        <p>Module content for Augmented Reality will go here.</p>
+                    </section>
+                    <section class="module">
+                        <h3>Evidences</h3>
+                        <p>Module content for Evidences will go here.</p>
+                        <div>
+                        </div>
+                    </section>
+                    <section class="module">
+                        <h3>Files</h3>
+                        <p>Module content for Files will go here.</p>
+                        <form role="File Upload"
+                            class="File Upload"
+                            action="index.html"
+                            method="post"
+                            enctype="application/x-www-form-urlencoded"
+                            enctype="multipart/form-data">
+                            <fieldset>
+                                <div class="File Upload">
+                                    <h1>Suba un archivo - Upload a File</h1>
+                                    <p>Drop files to upload, Browse (your device)</p>
+                                    <p>
+                                        <label for="File Upload">
+                                            <input type="file"
+                                                name="File Upload or foto"
+                                                value="File Upload"
+                                                placeholder="File Upload"
+                                                aria-label="Guarda tus archivos"
+                                                size="40">
+                                        </label>
+                                    </p>
+                                    <!--progress para archivos muy pesados-->
+                                    <button type="submit" name="Browse your device">Subir</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <section class="module">
+                        <h3>Reports</h3>
+                        <p>Module content for Reports will go here.</p>
+                    </section>
+                </div>
+            </section>
+            <section class="dashboard-module" id="module-inventario" style="display:none">
+                <h2><i class="fas fa-box"></i> Inventario de Activos</h2>
+                <textarea placeholder="Agrega información sobre Inventario de Activos..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-match" style="display:none">
+                <h2><i class="fas fa-handshake"></i> Zona Match</h2>
+                <textarea placeholder="Agrega información sobre Zona Match..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-ar" style="display:none">
+                <h2><i class="fas fa-vr-cardboard"></i> Realidad Aumentada</h2>
+                <textarea placeholder="Agrega información sobre Realidad Aumentada..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-gps" style="display:none">
+                <h2><i class="fas fa-map-marker-alt"></i> GPS Tracking</h2>
+                <textarea placeholder="Agrega información sobre GPS Tracking..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-evidencias" style="display:none">
+                <h2><i class="fas fa-camera"></i> Evidencias</h2>
+                <textarea placeholder="Agrega información sobre Evidencias..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-reportes" style="display:none">
+                <h2><i class="fas fa-chart-bar"></i> Reportes</h2>
+                <textarea placeholder="Agrega información sobre Reportes..." rows="4" style="width:100%"></textarea>
+            </section>
+            <section class="dashboard-module" id="module-chats" style="display:none">
+                <h2><i class="fas fa-comments"></i> Chats</h2>
+                <h4>Chat</h4>
+                <p><label for="">Chat
+                  <textarea name="name" rows="5" cols="50"></textarea>
+                  </label></p>
+                <textarea rows="3" cols="30">Comentarios de otras personas</textarea>
+                <br>
+                <p> Los chats de los demás van del lado izquierdo y los míos del lado derecho
+                esto para seguir las prácticas comunes de whatsapp --<p>
+                <textarea rows="3" cols="30">Comentarios mios</textarea>
+                <button type="submit">comentar</button>
+                <br>
+                <input type="text" placeholder="Correo electrónico" />
+                <button type="submit">Invitar usuarios</button>
+            </section>
+            <section class="dashboard-module" id="module-autorizador" style="display:none">
+                <h2><i class="fas fa-user-check"></i> Autorizador de Archivos</h2>
+                <h4>Autorizador de archivos - Chat para ponerse de acuerdo</h4>
+                <textarea placeholder="Agrega información sobre Autorizador de Archivos..." rows="4" style="width:100%"></textarea>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 
