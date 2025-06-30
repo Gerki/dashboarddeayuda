@@ -1,0 +1,14 @@
+{
+  "name": "visualgv-dashboard",
+  "version": "1.0.0",
+  "description": "Visualgv.com dashboard application",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build complete - static files ready'",
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": ["dashboard", "visualgv"],
+  "author": "",
+  "license": "ISC"
+}
